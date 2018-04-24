@@ -1,0 +1,25 @@
+version: '2'
+services:
+    app:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./app:/app
+        links:
+            - redis
+            - mongo
+    redis:
+        image: "redis"
+        ports:
+            - "6379:6379"
+        volumes:
+            - db-data:/data
+    mongo:
+        image: "mongo"
+        volumes:
+            - db-data:/data/db
+        ports:
+            - "27017:27017"
+volumes:
+    db-data:

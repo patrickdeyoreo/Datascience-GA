@@ -6,5 +6,8 @@
 
 !/.gitignore
 
-!/Modules/**
+!/modules
+!/modules/**
+
+!/project_4
 !/project_4/**
