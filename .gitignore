@@ -1,0 +1,10 @@
+#
+## .gitignore
+#
+
+/**
+
+!/.gitignore
+
+!/Modules/**
+!/project_4/**
